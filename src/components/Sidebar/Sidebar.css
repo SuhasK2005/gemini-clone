@@ -1,5 +1,5 @@
 .sidebar{
-    min-height: 100px;
+    min-height: 100vh;
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
@@ -9,10 +9,9 @@
 
 .sidebar img{
     width: 20px;
-    display: block;
 }
 
-.sidebar .top{
+.sidebar .menu{
     display: block;
     margin-left: 10px;
     cursor: pointer;
