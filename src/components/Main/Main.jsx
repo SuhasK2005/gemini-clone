@@ -29,7 +29,7 @@ const Main = () => {
             <img src={assets.message_icon} alt="" />
           </div>
           <div className="card">
-            <p>Improve the readability of the following code</p>
+            <p>Improve the readability of the following codes</p>
             <img src={assets.code_icon} alt="" />
           </div>
         </div>
