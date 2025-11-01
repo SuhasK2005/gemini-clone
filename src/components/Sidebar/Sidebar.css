@@ -3,12 +3,20 @@
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #f0f4f9 ;
+    background-color: var(--sidebar-bg);
     padding: 25px 15px ;
+    transition: all 0.3s ease;
 }
 
 .sidebar img{
     width: 20px;
+    filter: brightness(0) saturate(100%);
+    opacity: 0.7;
+}
+
+body.dark-mode .sidebar img{
+    filter: brightness(0) saturate(100%) invert(100%);
+    opacity: 0.9;
 }
 
 .sidebar .menu{
@@ -24,11 +32,16 @@
     align-items: center;
     gap: 10px;
     padding: 10px 15px;
-    background-color: #e6eaf1;
+    background-color: var(--card-bg);
     border-radius: 50px;
     font-size: 14px;
-    color: grey;
+    color: var(--text-color);
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .new-chat:hover{
+    background-color: var(--card-hover);
 }
 
 .sidebar .recent{
@@ -39,6 +52,7 @@
 .sidebar .recent-title{
     margin-top: 30px;
     margin-bottom: 20px;
+    color: var(--text-color);
 }
 
 .sidebar .recent-entry{
@@ -48,12 +62,23 @@
     padding: 10px;
     padding-right: 40px;
     border-radius: 50px;
-    color: #282828;
+    color: var(--text-color);
     cursor: pointer;
+    animation: fadeIn 1s;
+    transition: background-color 0.3s ease;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .sidebar .recent-entry:hover{
-    background-color: #e2e6eb;
+    background-color: var(--recent-hover);
 }
 
 .sidebar .bottom{
@@ -64,4 +89,10 @@
 .sidebar .bottom-item{
     padding-right: 10px;
     cursor: pointer;
+}
+
+@media (max-width:600px) {
+    .sidebar{
+        display: none;
+    }
 }

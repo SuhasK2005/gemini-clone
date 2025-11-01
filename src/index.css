@@ -5,9 +5,39 @@
   margin:0;
   box-sizing: border-box;
   font-family: Outfit;
-  
 }
+
+:root {
+  /* Light mode colors */
+  --bg-color: #ffffff;
+  --sidebar-bg: #f0f4f9;
+  --card-bg: #f0f4f9;
+  --card-hover: #dfe4ea;
+  --text-color: #585858;
+  --text-secondary: #c4c7c5;
+  --input-bg: #f0f4f9;
+  --nav-text: #585858;
+  --recent-hover: #e2e6eb;
+  --loader-bg: #f6f7f8;
+}
+
+body.dark-mode {
+  /* Dark mode colors */
+  --bg-color: #1e1e1e;
+  --sidebar-bg: #2d2d2d;
+  --card-bg: #2d2d2d;
+  --card-hover: #3a3a3a;
+  --text-color: #e3e3e3;
+  --text-secondary: #9aa0a6;
+  --input-bg: #2d2d2d;
+  --nav-text: #e3e3e3;
+  --recent-hover: #3a3a3a;
+  --loader-bg: #3a3a3a;
+}
+
 #root{
   min-height:100vh;
   display: flex;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
 }
