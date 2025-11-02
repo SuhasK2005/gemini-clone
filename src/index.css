@@ -40,4 +40,21 @@ body.dark-mode {
   display: flex;
   background-color: var(--bg-color);
   transition: background-color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling for all devices */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better mobile touch targets */
+@media (max-width: 768px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  button, a, input, .card, .theme-toggle {
+    touch-action: manipulation;
+  }
 }
